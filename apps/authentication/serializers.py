@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -33,8 +35,14 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
         return user
 
+
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name']
         read_only_fields = ['username']
+
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    """Standard JWT serializer — login response is reshaped in the view."""
+    pass
