@@ -20,6 +20,8 @@ A RESTful backend API for the Student Feedback Portal built using Django, Django
 - User Registration
 - User Login with JWT Authentication
 - Refresh Token Authentication
+- Authenticated user profile 
+- Ownership-based permissions
 - Feedback CRUD Operations
 - Protected APIs
 - PostgreSQL Database Integration
@@ -138,6 +140,8 @@ http://127.0.0.1:8000
 | POST | `/api/auth/register/` | Register user |
 | POST | `/api/auth/login/` | Login user |
 | POST | `/api/auth/refresh/` | Refresh JWT token |
+| GET | `/api/auth/profile/` | Get authenticated user profile |
+| PATCH | `/api/auth/profile/` | Update profile  |
 
 ---
 
