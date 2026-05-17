@@ -154,6 +154,7 @@ http://127.0.0.1:8000
 | GET | `/api/feedbacks/<id>/` | Get single feedback |
 | PUT | `/api/feedbacks/<id>/` | Update feedback |
 | DELETE | `/api/feedbacks/<id>/` | Delete feedback |
+| GET | `/api/feedbacks/` | Get all feedbacks |
 
 ---
 
